@@ -3,7 +3,7 @@ import 'package:my_app_testing/custom_colors.dart' show CustomColors;
 
 class StyleText extends StatelessWidget {
   final String contentText;
-  const StyleText({super.key, required this.contentText});
+  const StyleText(this.contentText , {super.key});
 
   @override
   Widget build(BuildContext context) {

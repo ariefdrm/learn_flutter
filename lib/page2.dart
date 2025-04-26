@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_app_testing/style_text.dart';
 
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
 
 class Secondpage extends StatelessWidget {
-  const Secondpage({super.key});
+  final List<Color> gradientColors;
+  const Secondpage({super.key, required this.gradientColors});
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +17,12 @@ class Secondpage extends StatelessWidget {
           gradient: LinearGradient(
             begin: startAlignment,
             end: endAlignment,
-            colors: [Colors.red, Colors.yellow],
+            colors: gradientColors,
           ),
         ),
-        child: Center(child: StyleText(contentText: 'Hello, World')),
+        child: Center(
+          child: Image.asset('assets/images/dice-2.png', width: 200),
+        ),
       ),
     );
   }
