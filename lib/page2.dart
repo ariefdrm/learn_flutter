@@ -1,4 +1,6 @@
+// import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:my_app_testing/dice_roller.dart';
 
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
@@ -6,6 +8,7 @@ const endAlignment = Alignment.bottomRight;
 class Secondpage extends StatelessWidget {
   final List<Color> gradientColors;
   const Secondpage({super.key, required this.gradientColors});
+
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +24,7 @@ class Secondpage extends StatelessWidget {
           ),
         ),
         child: Center(
-          child: Image.asset('assets/images/dice-2.png', width: 200),
+          child: DiceRoller(),
         ),
       ),
     );
