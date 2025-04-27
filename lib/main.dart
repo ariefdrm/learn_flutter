@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:my_app_testing/page2.dart';
+import 'package:my_app_testing/utils/custom_colors.dart' show CustomColors;
 
 void main() {
   // runApp(WidgetsApp(color: Colors.red, home: Text('Hello World!')));
 
-  runApp(const MaterialApp(home: Secondpage()));
+  runApp(
+    MaterialApp(
+      home: Secondpage(
+        gradientColors: [
+          CustomColors.darkMidnight,
+          CustomColors.lightSky,
+          CustomColors.lightWhite,
+        ],
+      ),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +26,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       home: Scaffold(
         body: Column(
           spacing: 50,
