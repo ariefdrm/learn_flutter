@@ -6,7 +6,12 @@ const endAlignment = Alignment.bottomRight;
 
 class Secondpage extends StatelessWidget {
   final List<Color> gradientColors;
-  const Secondpage({super.key, required this.gradientColors});
+  final String appBarTitle;
+  const Secondpage({
+    super.key,
+    required this.appBarTitle,
+    required this.gradientColors,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +19,7 @@ class Secondpage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         // backgroundColor: Color.fromARGB(255, 68, 68, 68),
-        appBar: AppBar(title: Center(child: Text('Second Page'))),
+        appBar: AppBar(title: Center(child: Text(appBarTitle))),
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(

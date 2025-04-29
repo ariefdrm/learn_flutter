@@ -7,6 +7,7 @@ void main() {
 
   runApp(
     const Secondpage(
+      appBarTitle: 'Second Page',
       gradientColors: [
         CustomColors.darkMidnight,
         CustomColors.darkSky,
