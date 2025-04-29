@@ -1,4 +1,3 @@
-// import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:my_app_testing/dice_roller.dart';
 
@@ -9,22 +8,22 @@ class Secondpage extends StatelessWidget {
   final List<Color> gradientColors;
   const Secondpage({super.key, required this.gradientColors});
 
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // backgroundColor: Color.fromARGB(255, 68, 68, 68),
-      appBar: AppBar(title: Center(child: Text('Second Page'))),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: startAlignment,
-            end: endAlignment,
-            colors: gradientColors,
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        // backgroundColor: Color.fromARGB(255, 68, 68, 68),
+        appBar: AppBar(title: Center(child: Text('Second Page'))),
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: startAlignment,
+              end: endAlignment,
+              colors: gradientColors,
+            ),
           ),
-        ),
-        child: Center(
-          child: DiceRoller(),
+          child: Center(child: DiceRoller()),
         ),
       ),
     );
